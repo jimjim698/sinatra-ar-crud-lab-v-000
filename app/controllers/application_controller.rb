@@ -27,7 +27,7 @@ class ApplicationController < Sinatra::Base
 
     #{"name"=>"jim", "content"=>"this ", "submit"=>"submit"}
     binding.pry
-    @post = Post.new(params[post])
+    @post = Post.new(params[:post])
     @post.save
     post_id = @post.id
     redirect '/posts'
